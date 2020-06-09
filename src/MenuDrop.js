@@ -1,4 +1,4 @@
-const MenuDrop = (() => {
+const MenuDropAllItems = (() => {
 
 
     function menuDrop(navDropTitles) {
@@ -23,4 +23,4 @@ const MenuDrop = (() => {
 
 })();
 
-export { MenuDrop };
+export { MenuDropAllItems };
