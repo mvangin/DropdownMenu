@@ -1,0 +1,134 @@
+*{
+    padding: 0px;
+    margin: 0px;
+}
+.navbar {
+    position: fixed;
+    display: flex;
+    justify-content: space-evenly;
+    background: rgb(197, 195, 195);
+    width: 100%;
+    height: 80px;
+    z-index: 41;
+}
+
+
+.conflict-dropdown {
+    display: none;
+}
+.navTitle {
+    transition: all .5s ease;
+
+}
+.navTitle:hover{
+    background:  rgb(131, 178, 233);
+}
+
+
+.research-dropdown {
+    display: none;
+}
+
+
+.store-dropdown {
+    display: none;
+}
+
+.navBlock {
+    width: 25%;
+    padding: 10px;  
+  
+}
+
+.dropDown-item {
+    padding: 10px 10px;
+    transition: all .3s ease;
+
+}
+.navDropdown{
+    background: white;
+    border: 1px solid grey;
+}
+
+.navTitle {
+    text-align: center;
+    border: solid grey 2px;
+    padding: 20px;   
+}
+
+.navDropdown.active {
+    display: block;
+}
+
+.navDropdown div:hover {
+    background: rgb(131, 178, 233);
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: black
+}
+ 
+.leftButtonWrapper {
+    float:left;
+}
+.contentWrapper {
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+.pictureFrame {
+    width: 400px;
+    height: 300px;
+    padding: 20px;
+    margin: 20px;
+    border: solid black 2px;
+    background: rgb(231, 229, 229);
+}
+
+.picture {
+    width: 100%;
+    height: 100%;
+}
+
+
+.picNavButton {
+    padding: 20px;
+    border: 2px solid grey;
+    border-radius: 10px;
+    background: rgb(131, 178, 233);
+}
+
+.image {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    width: 400px;
+    height: 300px;
+    transition: opacity .8s ease;
+
+}
+
+.picCircleNavWrapper {
+    margin: 0 auto;
+    margin-top: 10px;
+    width: 600px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+
+}
+
+.picCircleButton {
+    margin: 0px 10px;
+    border: 2px solid black;
+    border-radius: 20px;
+    width: 5px;
+    height:5px;
+    padding: 5px
+
+}
+
