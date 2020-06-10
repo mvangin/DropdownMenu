@@ -4,7 +4,7 @@ const MenuDropAllItems = (() => {
     function menuDrop(navDropTitles) {
 
         navDropTitles.forEach((menuItem) => {
-            menuItem.addEventListener("click", (e) => {
+            menuItem.addEventListener("click", () => {
                 menuItem.nextElementSibling.classList.toggle("active");
             });
         });
