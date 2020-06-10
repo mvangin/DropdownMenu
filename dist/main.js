@@ -86,6 +86,18 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./src/MenuDropAllItems.js":
+/*!*********************************!*\
+  !*** ./src/MenuDropAllItems.js ***!
+  \*********************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\nconst MenuDropAllItems = (() => {\n\n\n    function menuDrop(navDropTitles) {\n\n        navDropTitles.forEach((menuItem) => {\n            menuItem.addEventListener(\"click\", (e) => {\n                menuItem.nextElementSibling.classList.toggle(\"active\");\n            });\n        });\n\n        window.addEventListener(\"click\",removeOldMenuDrops);\n\n        function removeOldMenuDrops(e) {\n            navDropTitles.forEach((item) => {\n                if (e.target !== item) {\n                    item.nextElementSibling.classList.remove('active');\n                }\n            })\n        }\n    }\n\n    return { menuDrop };\n\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (MenuDropAllItems);\n\n//# sourceURL=webpack:///./src/MenuDropAllItems.js?");
+
+/***/ }),
+
 /***/ "./src/index.js":
 /*!**********************!*\
   !*** ./src/index.js ***!
@@ -94,19 +106,7 @@
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _menuDrop_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./menuDrop.js */ \"./src/menuDrop.js\");\n/* harmony import */ var _slideshow_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./slideshow.js */ \"./src/slideshow.js\");\n/* harmony import */ var _slideshow_js__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_slideshow_js__WEBPACK_IMPORTED_MODULE_1__);\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
-
-/***/ }),
-
-/***/ "./src/menuDrop.js":
-/*!*************************!*\
-  !*** ./src/menuDrop.js ***!
-  \*************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-eval("__webpack_require__.r(__webpack_exports__);\nconst menuDrop = (() => {\n    const conflictTitle = document.querySelector(\".conflictTitle\");\n    const researchTitle = document.querySelector(\".researchTitle\");\n    const storeTitle = document.querySelector(\".storeTitle\");\n    \n    \n    window.addEventListener(\"click\", (e) => {\n        if (e.target !== conflictTitle) {\n            conflictTitle.nextElementSibling.classList.remove('active')\n        }\n        if (e.target !== researchTitle) {\n            researchTitle.nextElementSibling.classList.remove('active');\n        }\n        if (e.target !== storeTitle) {\n            storeTitle.nextElementSibling.classList.remove('active');\n        }\n    });\n\n    function menuDrop(menuItem) {\n        menuItem.addEventListener(\"click\", (e) => {\n            menuItem.nextElementSibling.classList.toggle(\"active\");\n        })\n    }\n\n    menuDrop(conflictTitle);\n    menuDrop(researchTitle);\n    menuDrop(storeTitle);\n\n})();\n\n/* harmony default export */ __webpack_exports__[\"default\"] = ({menuDrop});\n\n//# sourceURL=webpack:///./src/menuDrop.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _slideshow_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./slideshow.js */ \"./src/slideshow.js\");\n/* harmony import */ var _slideshow_js__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_slideshow_js__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _MenuDropAllItems_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./MenuDropAllItems.js */ \"./src/MenuDropAllItems.js\");\n\n\n\nlet navDropTitles = document.querySelectorAll(\".navDropTitle\");\n\n_MenuDropAllItems_js__WEBPACK_IMPORTED_MODULE_1__[\"default\"].menuDrop(navDropTitles);\n\n\n\n\n\n\n\n\n\n\n\n//# sourceURL=webpack:///./src/index.js?");
 
 /***/ }),
 
